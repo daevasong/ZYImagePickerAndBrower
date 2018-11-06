@@ -41,7 +41,7 @@ public class ZYBaseViewController: UIViewController {
     }
     
     func setBackNav() {
-        let backImage = UIImage.zyImageFromeBundle(named: "icon_back_white.png")
+        let backImage = UIImage(named: "App_NavigationItem_Back_White")
         let backButton = UIButton(frame: CGRect(x: 0, y: ZYStatusBarHeight, width: 50, height: ZYNavigationHeight))
         backButton.backgroundColor = UIColor.clear
         backButton.imageView?.contentMode = .center
@@ -72,11 +72,11 @@ public class ZYBaseViewController: UIViewController {
     }
     
     @objc func backClick(button: UIButton) {
-        if self.presentationController != nil{
-            self.dismiss(animated: true, completion: nil)
-        }else{
+//        if self.presentationController != nil{
+//            self.dismiss(animated: true, completion: nil)
+//        }else{
             self.navigationController!.popViewController(animated: true)
-        }
+//        }
     }
     
     @objc func rightButtonClick(button: UIButton) {

@@ -103,7 +103,7 @@ public class ZYPhotoNavigationViewController: UINavigationController {
     class func zyGetSelectView() -> UIView {
         let view = UIImageView(frame: CGRect(x: 0, y: 0, width: 32, height: 32))
         view.backgroundColor = ZYPhotoAlbumSkinColor
-        view.image = UIImage.zyImageFromeBundle(named: "album_select_blue.png")
+        view.image = UIImage(named: "Common_Button_Unselected_Radius")
         view.layer.cornerRadius = 16
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.white.cgColor
@@ -112,19 +112,19 @@ public class ZYPhotoNavigationViewController: UINavigationController {
     }
     
     class func zyGetSelectNuberView(index:String) -> UIView {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 32, height: 32))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         view.backgroundColor = ZYPhotoAlbumSkinColor
-        view.layer.cornerRadius = 16
+        view.layer.cornerRadius = 10
         view.layer.masksToBounds = true
         
         let indexLabel = UILabel()
         indexLabel.frame = view.bounds
-        indexLabel.layer.cornerRadius = 16
+        indexLabel.layer.cornerRadius = 10
         indexLabel.layer.masksToBounds = true
         indexLabel.textColor = UIColor.white
         indexLabel.text = index
         indexLabel.textAlignment = .center
-        indexLabel.font = UIFont.systemFont(ofSize: 20)
+        indexLabel.font = UIFont.systemFont(ofSize: 13)
         
         view.addSubview(indexLabel)
         return view

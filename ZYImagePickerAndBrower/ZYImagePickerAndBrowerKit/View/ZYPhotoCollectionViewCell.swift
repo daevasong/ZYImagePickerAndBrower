@@ -14,7 +14,7 @@ class ZYPhotoCollectionViewCell: UICollectionViewCell {
         let contenViewSize = self.contentView.bounds.size
         button.frame = CGRect(x: contenViewSize.width * 2 / 3 - 2, y: 2, width: contenViewSize.width / 3, height: contenViewSize.width / 3)
         button.imageEdgeInsets = UIEdgeInsets(top: 0, left: contenViewSize.width/3 - contenViewSize.width/4, bottom: contenViewSize.width/3 - contenViewSize.width/4, right: 0)
-        button.asyncSetImage(UIImage.zyImageFromeBundle(named: "album_select_gray.png"), for: .normal)
+        button.asyncSetImage(UIImage(named: "Common_Button_Unselected_Radius"), for: .normal)
         button.addTarget(self, action: #selector(selelctButtonClick(button:)), for: .touchUpInside)
         return button
     }()
