@@ -94,6 +94,7 @@ class ZYPhotoPreviewViewController: ZYBaseViewController, UICollectionViewDelega
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.photoCollectionView.layoutIfNeeded()
         self.photoCollectionView.selectItem(at: IndexPath(item: self.currentIndex, section: 0), animated: false, scrollPosition: .left)
     }
     
